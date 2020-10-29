@@ -1,13 +1,13 @@
 const React = require('react')
 
 module.usePrevState = initialState => {
-    const [state, setState] = React.useState(initialState)
+    const [currentState, setCurrentState] = React.useState(initialState)
     const previousState = React.useRef(null)
 
-    const setValue = newValue => {
-        previousState.current = state
-        setState(newValue)
+    const setState = newValue => {
+        previousState.current = currentState
+        setCurrentState(newValue)
     }
 
-    return [state, previousState.current, setValue]
+    return [currentState, previousState.current, setState]
 }
