@@ -1,9 +1,12 @@
 # usePrevState
+## Basic usage
 
-    import usePrevState from 'use-prev-state'
-    
-    const App = () => {
-        const [count, prevCount, setCount] = usePrevState(0)
-    }
-    
-    export default App
+```javascript
+import usePrevState from 'use-prev-state'
+
+const App = () => {
+    const [count, prevCount, setCount] = usePrevState(0)
+}
+
+export default App
+```
