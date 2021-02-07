@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "cd example && webpack serve --mode=development",
+    "dev": "cd example && webpack serve --mode=development --hot",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
