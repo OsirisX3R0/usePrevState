@@ -1,6 +1,6 @@
 const React = require('react')
 
-export const usePrevState = initialState => {
+const usePrevState = initialState => {
     // Declaration of current state using useState hook
     const [currentState, setCurrentState] = React.useState(initialState)
     // Declaration of previous state (initially null) using useRef hook
@@ -19,3 +19,5 @@ export const usePrevState = initialState => {
     // an array, for easy renaming.
     return [currentState, previousState.current, setState]
 }
+
+export default usePrevState
