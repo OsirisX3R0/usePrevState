@@ -1,4 +1,6 @@
 # usePrevState
+
+A basic hook for capturing and maintaining previous state as well as current:
 ## Basic usage
 
 ```javascript
