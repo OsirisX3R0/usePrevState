@@ -1,6 +1,6 @@
 const React = require('react')
 
-const usePrevState = initialState => {
+function usePrevState<T>(initialState: T) {
     // Declaration of current state using useState hook
     const [currentState, setCurrentState] = React.useState(initialState)
     // Declaration of previous state (initially null) using useRef hook
@@ -10,7 +10,7 @@ const usePrevState = initialState => {
     // 1. Setting the previous state to the value of the current state 
     //    before changing its value.
     // 2. Setting the current state to the new value passed in.
-    const setState = newValue => {
+    function setState(newValue: T) {
         previousState.current = currentState
         setCurrentState(newValue)
     }
